@@ -6,7 +6,7 @@ import 'package:optical_character_recognizer/core/utils/utils.dart';
 import 'package:optical_character_recognizer/core/utils/validators.dart';
 import 'package:optical_character_recognizer/ui/screens/auth/forgot_password_screen.dart';
 import 'package:optical_character_recognizer/ui/screens/auth/sign_up_screen.dart';
-import 'package:optical_character_recognizer/ui/screens/home_screen.dart';
+import 'package:optical_character_recognizer/ui/screens/home/home_screen.dart';
 import 'package:optical_character_recognizer/ui/widgets/custom_button.dart';
 import 'package:optical_character_recognizer/ui/widgets/custom_textfield.dart';
 

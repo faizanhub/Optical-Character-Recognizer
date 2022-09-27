@@ -86,10 +86,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const SizedBox(height: 20),
-                  Text('Hi! ', style: loginTextTextStyle),
-                  Text('Welcome', style: loginTextTextStyle),
+                  const Text('Hi! ', style: loginTextTextStyle),
+                  const Text('Welcome', style: loginTextTextStyle),
                   const SizedBox(height: 10),
-                  Text('Lets create an account',
+                  const Text('Lets create an account',
                       style: loginTextSmallTextStyle),
                   CustomTextField(
                     hintText: 'Email',

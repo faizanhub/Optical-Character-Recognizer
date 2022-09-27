@@ -7,25 +7,25 @@ import 'package:optical_character_recognizer/ui/screens/auth/sign_up_screen.dart
 import 'package:optical_character_recognizer/ui/screens/breweries/breweries_details_screen.dart';
 import 'package:optical_character_recognizer/ui/screens/breweries/breweries_list_screen.dart';
 import 'package:optical_character_recognizer/ui/screens/google_map/map_screen.dart';
-import 'package:optical_character_recognizer/ui/screens/home_screen.dart';
+import 'package:optical_character_recognizer/ui/screens/home/home_screen.dart';
 
 class CustomRoutes {
   static Route onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
       case LoginScreen.routeName:
-        return MaterialPageRoute(builder: (_) => LoginScreen());
+        return MaterialPageRoute(builder: (_) => const LoginScreen());
 
       case SignUpScreen.routeName:
-        return MaterialPageRoute(builder: (_) => SignUpScreen());
+        return MaterialPageRoute(builder: (_) => const SignUpScreen());
 
       case ForgotPasswordScreen.routeName:
-        return MaterialPageRoute(builder: (_) => ForgotPasswordScreen());
+        return MaterialPageRoute(builder: (_) => const ForgotPasswordScreen());
 
       case ChangePasswordScreen.routeName:
-        return MaterialPageRoute(builder: (_) => ChangePasswordScreen());
+        return MaterialPageRoute(builder: (_) => const ChangePasswordScreen());
 
       case HomeScreen.routeName:
-        return MaterialPageRoute(builder: (_) => HomeScreen());
+        return MaterialPageRoute(builder: (_) => const HomeScreen());
 
       case BreweriesListScreen.routeName:
         return MaterialPageRoute(builder: (_) => BreweriesListScreen());
@@ -41,7 +41,7 @@ class CustomRoutes {
         return MaterialPageRoute(builder: (_) => MapScreen());
 
       default:
-        return MaterialPageRoute(builder: (_) => LoginScreen());
+        return MaterialPageRoute(builder: (_) => const LoginScreen());
     }
   }
 }

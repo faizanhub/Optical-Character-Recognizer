@@ -58,23 +58,23 @@ class Brewery {
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['name'] = this.name;
-    data['brewery_type'] = this.breweryType;
-    data['street'] = this.street;
-    data['address_2'] = this.address2;
-    data['address_3'] = this.address3;
-    data['city'] = this.city;
-    data['state'] = this.state;
-    data['county_province'] = this.countyProvince;
-    data['postal_code'] = this.postalCode;
-    data['country'] = this.country;
-    data['longitude'] = this.longitude;
-    data['latitude'] = this.latitude;
-    data['phone'] = this.phone;
-    data['website_url'] = this.websiteUrl;
-    data['updated_at'] = this.updatedAt;
-    data['created_at'] = this.createdAt;
+    data['id'] = id;
+    data['name'] = name;
+    data['brewery_type'] = breweryType;
+    data['street'] = street;
+    data['address_2'] = address2;
+    data['address_3'] = address3;
+    data['city'] = city;
+    data['state'] = state;
+    data['county_province'] = countyProvince;
+    data['postal_code'] = postalCode;
+    data['country'] = country;
+    data['longitude'] = longitude;
+    data['latitude'] = latitude;
+    data['phone'] = phone;
+    data['website_url'] = websiteUrl;
+    data['updated_at'] = updatedAt;
+    data['created_at'] = createdAt;
     return data;
   }
 }
