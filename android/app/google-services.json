@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1090864952884",
+    "project_id": "character-recognizer-6b402",
+    "storage_bucket": "character-recognizer-6b402.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1090864952884:android:fa35da23ccbff163defc61",
+        "android_client_info": {
+          "package_name": "com.example.optical_character_recognizer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1090864952884-7jap336rtmgmur1mvijgc5r45aqblfsl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzfirJCxS7BppZPenDoKuWfcAPzDiu1Xg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1090864952884-7jap336rtmgmur1mvijgc5r45aqblfsl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
