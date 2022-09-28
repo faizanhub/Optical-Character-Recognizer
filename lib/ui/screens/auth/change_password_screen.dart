@@ -82,10 +82,12 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                   Text('Password',
                       style: loginTextTextStyle.copyWith(fontSize: 50)),
                   const SizedBox(height: 10),
-                  Text('Enter your old Password',
-                      style: loginTextSmallTextStyle.copyWith(
-                        fontWeight: FontWeight.bold,
-                      )),
+                  Text(
+                    'Enter your old Password',
+                    style: loginTextSmallTextStyle.copyWith(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                   CustomTextField(
                     hintText: 'Old Password',
                     labelText: 'Old Password',
@@ -121,26 +123,6 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                   CustomButton(
                     text: 'Change Password',
                     onPress: handleChangePasswordBtn,
-                  ),
-                  const SizedBox(height: 30),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      const Text(
-                        'Dont have an account?',
-                        // style: alreadyHaveAccountStyle,
-                      ),
-                      GestureDetector(
-                        onTap: () {},
-                        child: const Text(
-                          '  Sign Up',
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                          ),
-                          // style: loginNowTextStyle,
-                        ),
-                      ),
-                    ],
                   ),
                 ],
               ),

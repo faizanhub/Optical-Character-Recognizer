@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:ndialog/ndialog.dart';
 import 'package:optical_character_recognizer/constants/text_styles.dart';
+import 'package:optical_character_recognizer/core/controllers/login_controller.dart';
 import 'package:optical_character_recognizer/core/services/auth_service.dart';
 import 'package:optical_character_recognizer/core/utils/utils.dart';
 import 'package:optical_character_recognizer/core/utils/validators.dart';
@@ -58,6 +60,11 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final LoginController loginC = Get.put(LoginController());
+
+    final height = MediaQuery.of(context).size.height;
+    final width = MediaQuery.of(context).size.width;
+
     return SafeArea(
       child: Scaffold(
         body: SingleChildScrollView(
@@ -71,7 +78,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       CircleAvatar(
-                        radius: 80,
+                        // radius: 80,
+                        radius: height * .10,
                         backgroundColor: const Color(0xffdad5f8),
                         child: Image.asset(
                           'assets/images/text_recognition.png',
@@ -113,14 +121,22 @@ class _LoginScreenState extends State<LoginScreen> {
                           validator: validateEmailField,
                           keyboardType: TextInputType.emailAddress,
                         ),
-                        CustomTextField(
-                          hintText: 'Password',
-                          labelText: 'Password',
-                          obsecureText: true,
-                          maxLines: 1,
-                          controller: _passwordController,
-                          validator: validatePasswordField,
-                        ),
+                        Obx(() {
+                          return CustomTextField(
+                            hintText: 'Password',
+                            labelText: 'Password',
+                            obsecureText: loginC.obscureText.value,
+                            maxLines: 1,
+                            controller: _passwordController,
+                            validator: validatePasswordField,
+                            suffixIcon: loginC.obscureText.value
+                                ? Icons.visibility
+                                : Icons.visibility_off,
+                            onSuffixIconTap: () {
+                              loginC.changeObscure(!loginC.obscureText.value);
+                            },
+                          );
+                        }),
                         const SizedBox(height: 15),
                         SizedBox(
                           width: double.infinity,
@@ -160,7 +176,8 @@ class _LoginScreenState extends State<LoginScreen> {
                               ),
                               const SizedBox(height: 10),
                               CircleAvatar(
-                                radius: 35,
+                                // radius: 35,
+                                radius: height * .04,
                                 backgroundColor: const Color(0xffefedfd),
                                 child: Image.asset(
                                   'assets/images/google.png',

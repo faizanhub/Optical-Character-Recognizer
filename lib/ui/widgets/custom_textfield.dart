@@ -12,6 +12,8 @@ class CustomTextField extends StatelessWidget {
   final int? maxLines;
   final bool readOnly;
   final bool? enabled;
+  final IconData? suffixIcon;
+  final VoidCallback? onSuffixIconTap;
 
   CustomTextField({
     this.controller,
@@ -25,6 +27,8 @@ class CustomTextField extends StatelessWidget {
     this.maxLines,
     this.readOnly = false,
     this.enabled,
+    this.suffixIcon,
+    this.onSuffixIconTap,
   });
 
   @override
@@ -42,6 +46,8 @@ class CustomTextField extends StatelessWidget {
         maxLines: maxLines,
         decoration: InputDecoration(
           labelText: labelText,
+          suffixIcon:
+              GestureDetector(onTap: onSuffixIconTap, child: Icon(suffixIcon)),
           hintText: hintText,
           // border: OutlineInputBorder(
           //   borderRadius: BorderRadius.circular(15),

@@ -4,10 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:optical_character_recognizer/firebase_options.dart';
 import 'package:optical_character_recognizer/routes.dart';
-import 'package:optical_character_recognizer/ui/screens/auth/change_password_screen.dart';
-import 'package:optical_character_recognizer/ui/screens/auth/forgot_password_screen.dart';
 import 'package:optical_character_recognizer/ui/screens/auth/login_screen.dart';
-import 'package:optical_character_recognizer/ui/screens/auth/sign_up_screen.dart';
 import 'package:optical_character_recognizer/ui/screens/home/home_screen.dart';
 
 void main() async {
@@ -27,6 +24,7 @@ class MyApp extends StatelessWidget {
     final firebaseAuth = FirebaseAuth.instance;
     return GetMaterialApp(
       title: 'Character Recognizer',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blueGrey,
       ),

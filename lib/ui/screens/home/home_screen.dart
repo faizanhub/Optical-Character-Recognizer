@@ -19,6 +19,9 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final HomeController homeController = Get.put(HomeController());
 
+    final height = MediaQuery.of(context).size.height;
+    final width = MediaQuery.of(context).size.width;
+
     showCustomDialog() {
       showDialog(
           context: context,
@@ -72,8 +75,8 @@ class HomeScreen extends StatelessWidget {
                   const SizedBox(height: 10),
                   Center(
                     child: Container(
-                      height: MediaQuery.of(context).size.height * .22,
-                      width: MediaQuery.of(context).size.width * 1,
+                      height: height * .22,
+                      width: width * 1,
                       child: homeController.image.value != null
                           ? ClipRRect(
                               child: Image.file(
@@ -132,8 +135,8 @@ class HomeScreen extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(14.0),
                     child: Container(
-                      height: MediaQuery.of(context).size.height * .26,
-                      width: MediaQuery.of(context).size.width * 1,
+                      height: height * .26,
+                      width: width * 1,
                       decoration: BoxDecoration(
                         color: Colors.grey.shade300,
                         borderRadius: BorderRadius.circular(10),

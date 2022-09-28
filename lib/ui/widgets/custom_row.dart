@@ -26,8 +26,8 @@ class CustomRow extends StatelessWidget {
             GestureDetector(
               onTap: onPress,
               child: Container(
-                height: 40,
-                width: 120,
+                height: MediaQuery.of(context).size.height * .05,
+                width: MediaQuery.of(context).size.width * .28,
                 decoration: BoxDecoration(
                   color: color,
                 ),

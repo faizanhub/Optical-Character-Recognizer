@@ -52,58 +52,60 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Padding(
-          padding: const EdgeInsets.all(20.0),
-          child: Form(
-            key: _formKey,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const SizedBox(height: 50),
-                Text('Oh, No! ',
-                    style: loginTextTextStyle.copyWith(fontSize: 50)),
-                Text('I Forgot',
-                    style: loginTextTextStyle.copyWith(fontSize: 50)),
-                const SizedBox(height: 10),
-                Text(
-                    'Enter your email we will send you a link to change a new password',
-                    style: loginTextSmallTextStyle),
-                const SizedBox(height: 50),
-                CustomTextField(
-                  hintText: 'Email',
-                  labelText: 'Email',
-                  controller: _emailController,
-                  validator: validateEmailField,
-                  keyboardType: TextInputType.emailAddress,
-                ),
-                const SizedBox(height: 20),
-                CustomButton(
-                  text: 'Forgot Password',
-                  onPress: handleForgotPasswordBtn,
-                ),
-                const SizedBox(height: 30),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Text(
-                      'Dont have an account?',
-                      // style: alreadyHaveAccountStyle,
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.pushNamed(context, SignUpScreen.routeName);
-                      },
-                      child: const Text(
-                        '  Sign Up',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
-                        // style: loginNowTextStyle,
+        body: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Form(
+              key: _formKey,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const SizedBox(height: 50),
+                  Text('Oh, No! ',
+                      style: loginTextTextStyle.copyWith(fontSize: 50)),
+                  Text('I Forgot',
+                      style: loginTextTextStyle.copyWith(fontSize: 50)),
+                  const SizedBox(height: 10),
+                  Text(
+                      'Enter your email we will send you a link to change a new password',
+                      style: loginTextSmallTextStyle),
+                  const SizedBox(height: 50),
+                  CustomTextField(
+                    hintText: 'Email',
+                    labelText: 'Email',
+                    controller: _emailController,
+                    validator: validateEmailField,
+                    keyboardType: TextInputType.emailAddress,
+                  ),
+                  const SizedBox(height: 20),
+                  CustomButton(
+                    text: 'Forgot Password',
+                    onPress: handleForgotPasswordBtn,
+                  ),
+                  const SizedBox(height: 30),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Text(
+                        'Dont have an account?',
+                        // style: alreadyHaveAccountStyle,
                       ),
-                    ),
-                  ],
-                ),
-              ],
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.pushNamed(context, SignUpScreen.routeName);
+                        },
+                        child: const Text(
+                          '  Sign Up',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                          ),
+                          // style: loginNowTextStyle,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
         ),

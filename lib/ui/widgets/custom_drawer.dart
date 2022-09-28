@@ -4,7 +4,6 @@ import 'package:optical_character_recognizer/ui/screens/auth/change_password_scr
 import 'package:optical_character_recognizer/ui/screens/auth/login_screen.dart';
 import 'package:optical_character_recognizer/ui/screens/breweries/breweries_list_screen.dart';
 import 'package:optical_character_recognizer/ui/screens/google_map/map_screen.dart';
-import 'package:optical_character_recognizer/ui/screens/home/home_screen.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({Key? key}) : super(key: key);
@@ -18,17 +17,18 @@ class CustomDrawer extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
-            children: const [
+            children: [
               CircleAvatar(
-                radius: 50.0,
-                backgroundImage: AssetImage(
+                // radius: 50.0,
+                radius: MediaQuery.of(context).size.height * .07,
+                backgroundImage: const AssetImage(
                   'assets/images/faizan_image.jpg',
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20.0,
               ),
-              Text(
+              const Text(
                 "Faizan",
                 style: TextStyle(
                   fontSize: 22.0,
@@ -36,10 +36,10 @@ class CustomDrawer extends StatelessWidget {
                   // color: Colors.white,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 25.0,
               ),
-              Divider(
+              const Divider(
                 height: 1.0,
                 thickness: 1.0,
               )

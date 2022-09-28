@@ -22,18 +22,22 @@ class _MapScreenState extends State<MapScreen> {
   );
 
   getCurrentLocation() async {
-    Position pos = await Location().getCurrentLocation();
+    try {
+      Position pos = await Location().getCurrentLocation();
 
-    final GoogleMapController mapController = await _controller.future;
+      final GoogleMapController mapController = await _controller.future;
 
-    mapController.animateCamera(
-      CameraUpdate.newCameraPosition(
-        CameraPosition(
-          target: LatLng(pos.latitude, pos.longitude),
-          zoom: 14.4746,
+      mapController.animateCamera(
+        CameraUpdate.newCameraPosition(
+          CameraPosition(
+            target: LatLng(pos.latitude, pos.longitude),
+            zoom: 14.4746,
+          ),
         ),
-      ),
-    );
+      );
+    } catch (e) {
+      debugPrint(e.toString());
+    }
   }
 
   @override

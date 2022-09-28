@@ -4,7 +4,7 @@ class Location {
   ///Get Current Location
   Future<Position> getCurrentLocation() async {
     try {
-      // await Geolocator.requestPermission();
+      await Geolocator.requestPermission();
 
       Position position = await Geolocator.getCurrentPosition(
           desiredAccuracy: LocationAccuracy.medium);
